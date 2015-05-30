@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
     <title>Googcore - CoreDumper using Google API by kspviswa</title>
@@ -28,33 +28,15 @@
 
     <div class="container">
       <section id="main_content">
-        <h3>
-<a id="googcore" class="anchor" href="#googcore" aria-hidden="true"><span class="octicon octicon-link"></span></a>GoogCore</h3>
+        <h1>
+<a id="googcore" class="anchor" href="#googcore" aria-hidden="true"><span class="octicon octicon-link"></span></a>googCore</h1>
 
-<p>GoogleCoreDumper can be used to both read &amp; write coredumps. It also provides facility to add custom notes in the corefile through     SetCoreDumpNotes() api . Surprisingly, these functions aren't explained in the project wiki page. Nevertheless the man pages as part of package was still useful.</p>
+<p>Custom CoreDumps using GoogleCoreDumper | Adding user specific notes in the core.
+For more details, visit <a href="https://kspviswa.wordpress.com/2014/05/25/saving-user-specific-data-using-googlecoredumper-handy-tool-for-all-debug-enthusiast/">Project page</a> as part my blog.</p>
 
-<pre><code>SetCoreDumpNotes() 
-</code></pre>
+<p>Contact me for more details.</p>
 
-<p>sets the attributes in params to add additional notes to core dumps when called with<br>
-    GetCoreDumpWith() or  WriteCoreDumpWith()</p>
-
-<p>The notes are specified as an array of the Core‐dumperNote structure:</p>
-
-<pre><code>struct CoredumperNote {
-const char *name; // The vendor name
-unsigned int type; // A vendor specific type
-unsigned int description_size; // The size of the description field
-const void *description; // The note data
-};
-</code></pre>
-
-<p>The name, including a terminating null character, will be 4 byte aligned. The type is a user chosen value. The description_size specifies the amount of bytes to write from the description pointer in memory to the core dump note. The description will be padded to be 4 byte aligned.</p>
-
-<p>You can dump as many information you want, provided the total corefile size doesn't exceed the ulimit setting of the system.</p>
-
-<p>This project is a baby exercise to leverage GoogleCoreDumper and save the pmap output of the process in core, before it exits.
-This followed by tweaking the readelf command to read this special note in stdout.</p>
+<p>Cyanora!!!!!!!!</p>
       </section>
     </div>
 
